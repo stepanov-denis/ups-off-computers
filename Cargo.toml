@@ -1,0 +1,19 @@
+[package]
+name = "ups-off-computers"
+version = "0.1.0"
+edition = "2018"
+authors = ["Stepanov Denis <stepanov.d.m@yandex.ru>"]
+description = "Application for sending SMS notifications about UPS operation."
+license = "Apache-2.0"
+documentation = "https://docs.rs/ups-off-computers"
+readme = "README.md"
+keywords = ["ups", "monitoring", "notifications", "scada"]
+repository = "https://github.com/stepanov-denis/ups-off-computers/"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+reqwest = { version = "0.11.4", features = ["blocking"] }
+error-chain = "0.12.4"
+postgres = "0.19.1"
+online = { version = "3.0.1",  default-features = false, features = ["sync"] }
